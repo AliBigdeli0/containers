@@ -3,6 +3,10 @@ this container will create ApacheDS server on docker with `bash shell` access.
 
 Note: Although the project has been tested on debian linux OS, it should work on other operating systems too. 
 
+Note: installed apache ds version will be 2.0.0. 
+
+Note: To see apache license see [License page](https://www.apache.org/licenses/)
+
 ## requirements  
 Following requirements should be installed before start run docker
 * docker 
