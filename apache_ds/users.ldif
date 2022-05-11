@@ -1,0 +1,40 @@
+version: 1
+
+dn: ou=groups,dc=example,dc=com
+objectClass: organizationalUnit
+objectClass: top
+ou: groups
+
+dn: ou=users,dc=example,dc=com
+objectClass: organizationalUnit
+objectClass: top
+ou: users
+
+#########################################
+## users
+
+dn: cn=admin,ou=users,dc=example,dc=com
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+objectClass: top
+cn: admin
+sn: admin
+uid: mehran
+userPassword: admin
+
+#####################################
+## groups
+dn: cn=admins,ou=groups,dc=example,dc=com
+objectClass: groupOfUniqueNames
+objectClass: top
+cn: admins
+uniqueMember: cn=admin,ou=users,dc=example,dc=com
+ou: groups
+
+dn: cn=devs,ou=groups,dc=example,dc=com
+objectClass: groupOfUniqueNames
+objectClass: top
+cn: devs
+ou: groups
+uniqueMember: cn=cndev,ou=users,dc=example,dc=com
