@@ -1,1 +1,1 @@
-There is no limitations for contribution on this project. 
+There is no limitations for contributing in this project. 
