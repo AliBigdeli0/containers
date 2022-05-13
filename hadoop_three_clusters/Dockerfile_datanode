@@ -1,0 +1,19 @@
+FROM custom_hadoop_nn
+
+RUN echo 12
+
+#create path
+COPY ./datanode_files/core-site.xml $HADOOP_HOME/etc/hadoop/core-site.xml 
+COPY ./datanode_files/hdfs-site.xml $HADOOP_HOME/etc/hadoop/hdfs-site.xml
+COPY ./datanode_files/mapred-site.xml $HADOOP_HOME/etc/hadoop/mapred-site.xml
+COPY ./datanode_files/yarn-site.xml $HADOOP_HOME/etc/hadoop/yarn-site.xml
+
+#add data node
+RUN mkdir /datanode
+WORKDIR /datanode
+VOLUME [ "/datanode" ]
+
+#Final steps for installation
+COPY ./startup_data.sh /
+RUN chmod +x /startup_data.sh
+CMD /startup_data.sh

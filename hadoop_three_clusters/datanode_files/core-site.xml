@@ -1,0 +1,10 @@
+<configuration>
+<property>
+  <name>root.tmp.dir</name>
+  <value>/datanode/tmp</value>
+</property>
+<property>
+  <name>fs.default.name</name>
+  <value>hdfs://nn.local:9000</value>
+</property>
+</configuration>
