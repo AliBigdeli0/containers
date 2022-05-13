@@ -38,15 +38,16 @@ NOTE: the steps **ARE IN ORDER**
 
 Do the following steps : 
 
-1. run all containers : 
-    * to run name node container please run : `make nn_run`, this command will lead you to namenode's container terminal. 
-    * open another shell command (or CMD in windows) and run  `make dn1_run`, this command will lead you to datanode 1 container terminal. 
-    * open another shell command (or CMD in windows) and run  `make dn2_run`, this command will lead you to datanode 2 container terminal. 
-    * open another shell command (or CMD in windows) and run  `make dn3_run`, this command will lead you to datanode 3 container terminal. 
-    
+run all containers : 
+
+* to run name node container please run : `make nn_run`, this command will lead you to namenode's container terminal. 
+* open another shell command (or CMD in windows) and run  `make dn1_run`, this command will lead you to datanode 1 container terminal. 
+* open another shell command (or CMD in windows) and run  `make dn2_run`, this command will lead you to datanode 2 container terminal. 
+* open another shell command (or CMD in windows) and run  `make dn3_run`, this command will lead you to datanode 3 container terminal. 
+
 ![data node images](./images/dn_runs.png)
 
-    * go to the namenode terminal and run: `make start-all`, to test run `jps` in namenode's terminal. you will see that namenode is running. 
+* go to the namenode terminal and run: `make start-all`, to test run `jps` in namenode's terminal. you will see that namenode is running. 
 
 ![data node images](./images/nn_run.png)
 
