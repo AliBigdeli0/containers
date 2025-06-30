@@ -1,20 +1,20 @@
 # Hadoop Cluster Using Docker
-This section contain a 4 docker images which running with one namenode and 3 datanodes. The datanodes can be extended easily. Here is some features of this custom docker: 
+This section contains a 4 docker images which running with one namenode and 3 datanodes. The datanodes can be extended easily. Here are some features of this custom Docker: 
 
-NOTE: `HBASE Database` and `Zookeeper` will install too during installation process.  
+NOTE: `HBASE Database` and `Zookeeper` will be installed too during the installation process.  
 
 * useful for learning 
-* all details are designed from scratch in separate docker files. In addition all configure files are separated into folders
-* all containers can be run with simple `make` command
-* all containers are installed from scratch ( from ubuntu container )
+* All details are designed from scratch in separate Docker files. In addition, all configuration files are separated into folders
+* All containers can be run with the simple `make` command
+* All containers are installed from scratch ( from Ubuntu container )
 
 <br />
 <br />
 
 # Per Install Notes:
-Following requirements should be installed before start run docker
+The following requirements should be installed before starting to run Docker
 * docker 
-* gnu make (or its windows equivalent) 
+* GNU make (or its Windows equivalent) 
 
 <br />
 <br />
@@ -23,13 +23,13 @@ Following requirements should be installed before start run docker
 
 NOTE: the steps **ARE IN ORDER**
 
-* run `make create_network` to create network. 
-    * the created network name will be `hadoop_network`
-* run `make nn_build` to create name node. 
-    * to delete name node just run `make nn_rm`
-* run `make dn_build` to create data node image
+* Run `make create_network` to create a network. 
+    * The created network name will be `hadoop_network`
+* Run `make nn_build` to create the name node. 
+    * To delete the name node, just run `make nn_rm`
+* Run `make dn_build` to create a data node image
     * Although there is only one datanode, all containers will run with this container
-    * To delete data node image run `make dn_rm`
+    * To delete the data node image, run `make dn_rm`
 
 <br />
 <br />
@@ -38,16 +38,16 @@ NOTE: the steps **ARE IN ORDER**
 
 Do the following steps : 
 
-run all containers : 
+Run all containers : 
 
-* to run name node container please run : `make nn_run`, this command will lead you to namenode's container terminal. 
-* open another shell command (or CMD in windows) and run  `make dn1_run`, this command will lead you to datanode 1 container terminal. 
-* open another shell command (or CMD in windows) and run  `make dn2_run`, this command will lead you to datanode 2 container terminal. 
-* open another shell command (or CMD in windows) and run  `make dn3_run`, this command will lead you to datanode 3 container terminal. 
+* To run the name node container, please run: `make nn_run`. This command will lead you to the namenode's container terminal. 
+* Open another shell command (or CMD in Windows) and run  `make dn1_run`; this command will lead you to the datanode 1 container terminal. 
+* Open another shell command (or CMD in Windows) and run  `make dn2_run`; this command will lead you to the datanode 2 container terminal. 
+* Open another shell command (or CMD in Windows) and run  `make dn3_run`; this command will lead you to the datanode 3 container terminal. 
 
 ![data node images](./images/dn_runs.png)
 
-* go to the namenode terminal and run: `make start-all`, to test run `jps` in namenode's terminal. you will see that namenode is running. 
+* Go to the namenode terminal and run: `make start-all`, to test run `jps` in the namenode's terminal. You will see that the namenode is running. 
 
 ![data node images](./images/nn_run.png)
 
